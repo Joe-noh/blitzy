@@ -15,6 +15,7 @@ defmodule Blitzy.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Blitzy, []},
       extra_applications: [:logger]
     ]
   end
@@ -24,7 +25,7 @@ defmodule Blitzy.MixProject do
     [
       {:httpoison, "~> 1.0"},
       {:timex, "~> 3.1"},
-      {:tzdata, "~> 0.5"}
+      {:tzdata, "~> 0.1.8", override: true}
     ]
   end
 end
