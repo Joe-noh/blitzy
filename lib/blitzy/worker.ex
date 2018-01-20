@@ -14,7 +14,7 @@ defmodule Blitzy.Worker do
   end
 
   defp handle_response({_msecs, {:error, reason}}) do
-    Logger.info("worker #{name()} error due to #{reason}")
+    Logger.info("worker #{name()} error due to #{inspect reason}")
     {:error, reason}
   end
 
